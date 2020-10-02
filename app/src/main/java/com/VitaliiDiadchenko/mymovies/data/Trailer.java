@@ -1,4 +1,4 @@
-package com.demo.mymovies.data;
+package com.VitaliiDiadchenko.mymovies.data;
 
 public class Trailer {
     private String key;

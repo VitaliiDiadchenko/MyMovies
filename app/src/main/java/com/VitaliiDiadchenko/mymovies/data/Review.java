@@ -1,4 +1,4 @@
-package com.demo.mymovies.data;
+package com.VitaliiDiadchenko.mymovies.data;
 
 public class Review {
     private String author;

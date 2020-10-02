@@ -1,4 +1,4 @@
-package com.demo.mymovies.adapter;
+package com.VitaliiDiadchenko.mymovies.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,8 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.demo.mymovies.R;
-import com.demo.mymovies.data.Trailer;
+import com.VitaliiDiadchenko.mymovies.R;
+import com.VitaliiDiadchenko.mymovies.data.Trailer;
 
 import java.util.ArrayList;
 

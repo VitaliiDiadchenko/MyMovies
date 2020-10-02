@@ -1,4 +1,4 @@
-package com.demo.mymovies;
+package com.VitaliiDiadchenko.mymovies;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,11 +21,11 @@ import android.widget.CompoundButton;
 import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.TextView;
-import com.demo.mymovies.adapter.MoviesAdapter;
-import com.demo.mymovies.data.MainViewModel;
-import com.demo.mymovies.data.Movie;
-import com.demo.mymovies.utils.JSONUtils;
-import com.demo.mymovies.utils.NetworkUtils;
+import com.VitaliiDiadchenko.mymovies.adapter.MoviesAdapter;
+import com.VitaliiDiadchenko.mymovies.data.MainViewModel;
+import com.VitaliiDiadchenko.mymovies.data.Movie;
+import com.VitaliiDiadchenko.mymovies.utils.JSONUtils;
+import com.VitaliiDiadchenko.mymovies.utils.NetworkUtils;
 import org.json.JSONObject;
 import java.net.URL;
 import java.util.ArrayList;
@@ -75,10 +75,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      }
 
      private int getColumnCount() {
+         int smallPosterSize = 185;
          DisplayMetrics displayMetrics = new DisplayMetrics();
          getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
          int width = (int) (displayMetrics.widthPixels / displayMetrics.density);
-         return width / 185 > 2 ? width / 185 : 2;
+         return width / smallPosterSize > 2 ? width / smallPosterSize : 2;
      }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

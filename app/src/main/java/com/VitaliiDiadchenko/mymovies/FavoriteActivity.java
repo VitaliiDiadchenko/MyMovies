@@ -1,4 +1,4 @@
-package com.demo.mymovies;
+package com.VitaliiDiadchenko.mymovies;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,10 +15,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.demo.mymovies.adapter.MoviesAdapter;
-import com.demo.mymovies.data.FavoriteMovie;
-import com.demo.mymovies.data.MainViewModel;
-import com.demo.mymovies.data.Movie;
+import com.VitaliiDiadchenko.mymovies.adapter.MoviesAdapter;
+import com.VitaliiDiadchenko.mymovies.data.FavoriteMovie;
+import com.VitaliiDiadchenko.mymovies.data.MainViewModel;
+import com.VitaliiDiadchenko.mymovies.data.Movie;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,10 +53,11 @@ public class FavoriteActivity extends AppCompatActivity {
     }
 
     private int getColumnCount() {
+        int smallPosterSize = 185;
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int width = (int) (displayMetrics.widthPixels / displayMetrics.density);
-        return width / 185 > 2 ? width / 185 : 2;
+        return width / smallPosterSize > 2 ? width / smallPosterSize : 2;
     }
 
     @Override

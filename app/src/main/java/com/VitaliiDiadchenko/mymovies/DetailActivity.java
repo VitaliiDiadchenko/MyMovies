@@ -1,18 +1,13 @@
-package com.demo.mymovies;
+package com.VitaliiDiadchenko.mymovies;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
-import androidx.loader.app.LoaderManager;
-import androidx.loader.content.Loader;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -21,20 +16,17 @@ import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.demo.mymovies.adapter.ReviewAdapter;
-import com.demo.mymovies.adapter.TrailerAdapter;
-import com.demo.mymovies.data.FavoriteMovie;
-import com.demo.mymovies.data.MainViewModel;
-import com.demo.mymovies.data.Movie;
-import com.demo.mymovies.data.Review;
-import com.demo.mymovies.data.Trailer;
-import com.demo.mymovies.utils.JSONUtils;
-import com.demo.mymovies.utils.NetworkUtils;
+import com.VitaliiDiadchenko.mymovies.data.FavoriteMovie;
+import com.VitaliiDiadchenko.mymovies.data.MainViewModel;
+import com.VitaliiDiadchenko.mymovies.data.Review;
+import com.VitaliiDiadchenko.mymovies.data.Trailer;
+import com.VitaliiDiadchenko.mymovies.adapter.ReviewAdapter;
+import com.VitaliiDiadchenko.mymovies.adapter.TrailerAdapter;
+import com.VitaliiDiadchenko.mymovies.data.Movie;
+import com.VitaliiDiadchenko.mymovies.utils.JSONUtils;
+import com.VitaliiDiadchenko.mymovies.utils.NetworkUtils;
 import com.squareup.picasso.Picasso;
-
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.Locale;
 

@@ -1,4 +1,4 @@
-package com.demo.mymovies;
+package com.VitaliiDiadchenko.mymovies;
 
 import android.content.Context;
 

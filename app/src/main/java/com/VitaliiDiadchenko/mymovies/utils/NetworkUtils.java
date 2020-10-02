@@ -1,17 +1,16 @@
-package com.demo.mymovies.utils;
+package com.VitaliiDiadchenko.mymovies.utils;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.loader.content.AsyncTaskLoader;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -48,7 +47,7 @@ public class NetworkUtils {
         try {
             return new URL(uri.toString());
         } catch (MalformedURLException e) {
-            e.printStackTrace();
+            Log.i("Error while building URL to videos", String.valueOf(e));
         }
         return null;
     }
@@ -61,7 +60,7 @@ public class NetworkUtils {
         try {
             return new URL(uri.toString());
         } catch (MalformedURLException e) {
-            e.printStackTrace();
+            Log.i("Error while building URL to reviews", String.valueOf(e));
         }
         return null;
     }
@@ -85,7 +84,7 @@ public class NetworkUtils {
         try {
             result = new URL(uri.toString());
         } catch (MalformedURLException e) {
-            e.printStackTrace();
+            Log.i("Error while building URL", String.valueOf(e));
         }
         return result;
     }
@@ -96,9 +95,9 @@ public class NetworkUtils {
         try {
             result = new JSONLoadTask().execute(url).get();
         } catch (ExecutionException e) {
-            e.printStackTrace();
+            Log.i("Error while getting JSON for videos", String.valueOf(e));
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            Log.i("Error while getting JSON for videos", String.valueOf(e));
         }
         return result;
     }
@@ -109,9 +108,9 @@ public class NetworkUtils {
         try {
             result = new JSONLoadTask().execute(url).get();
         } catch (ExecutionException e) {
-            e.printStackTrace();
+            Log.i("Error while getting JSON for reviews", String.valueOf(e));
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            Log.i("Error while getting JSON for reviews", String.valueOf(e));
         }
         return result;
     }
@@ -122,9 +121,9 @@ public class NetworkUtils {
         try {
             result = new JSONLoadTask().execute(url).get();
         } catch (ExecutionException e) {
-            e.printStackTrace();
+            Log.i("Error while getting JSON from Network", String.valueOf(e));
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            Log.i("Error while getting JSON from Network", String.valueOf(e));
         }
         return result;
     }
@@ -168,7 +167,7 @@ public class NetworkUtils {
             try {
                 url = new URL(urlAsString);
             } catch (MalformedURLException e) {
-                e.printStackTrace();
+                Log.i("Exception in JSONLoader class", String.valueOf(e));
             }
             JSONObject result = null;
             if (url == null) {
@@ -188,9 +187,9 @@ public class NetworkUtils {
                 }
                 result = new JSONObject(builder.toString());
             } catch (IOException e) {
-                e.printStackTrace();
+                Log.i("Exception in JSONLoader class", String.valueOf(e));
             } catch (JSONException e) {
-                e.printStackTrace();
+                Log.i("Exception in JSONLoader class", String.valueOf(e));
             } finally {
                 if (connection != null) {
                     connection.disconnect();
@@ -221,9 +220,9 @@ public class NetworkUtils {
                 }
                 result = new JSONObject(builder.toString());
             } catch (IOException e) {
-                e.printStackTrace();
+                Log.i("Exception in JSONLoadTask class", String.valueOf(e));
             } catch (JSONException e) {
-                e.printStackTrace();
+                Log.i("Exception in JSONLoadTask class", String.valueOf(e));
             } finally {
                 if (connection != null) {
                     connection.disconnect();

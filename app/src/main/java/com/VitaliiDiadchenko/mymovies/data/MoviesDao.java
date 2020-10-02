@@ -1,4 +1,4 @@
-package com.demo.mymovies.data;
+package com.VitaliiDiadchenko.mymovies.data;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;

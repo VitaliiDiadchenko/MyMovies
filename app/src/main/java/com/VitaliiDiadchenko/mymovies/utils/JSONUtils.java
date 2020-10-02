@@ -1,13 +1,13 @@
-package com.demo.mymovies.utils;
+package com.VitaliiDiadchenko.mymovies.utils;
 
-import com.demo.mymovies.data.Movie;
-import com.demo.mymovies.data.Review;
-import com.demo.mymovies.data.Trailer;
+import android.util.Log;
 
+import com.VitaliiDiadchenko.mymovies.data.Review;
+import com.VitaliiDiadchenko.mymovies.data.Trailer;
+import com.VitaliiDiadchenko.mymovies.data.Movie;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 
 public class JSONUtils {
@@ -50,7 +50,7 @@ public class JSONUtils {
                 result.add(review);
             }
         } catch (JSONException e) {
-            e.printStackTrace();
+            Log.i("Error while getting Reviews", String.valueOf(e));
         }
         return result;
     }
@@ -70,12 +70,12 @@ public class JSONUtils {
                 result.add(trailer);
             }
         } catch (JSONException e) {
-            e.printStackTrace();
+            Log.i("Error while getting Trailers", String.valueOf(e));
         }
         return result;
     }
 
-    //создаем метод где будем получать значения с фильмами по нашим ключам
+    //создаем метод где будем получать значения с фильмами по ключам
     public static ArrayList<Movie> getMoviesFromJSON(JSONObject jsonObject) {
         ArrayList<Movie> result = new ArrayList<>();
         if (jsonObject == null) {
@@ -100,7 +100,7 @@ public class JSONUtils {
                 result.add(movie);
             }
         } catch (JSONException e) {
-            e.printStackTrace();
+            Log.i("Error while getting Movies", String.valueOf(e));
         }
         return result;
     }
